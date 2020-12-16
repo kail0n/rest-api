@@ -46,18 +46,19 @@ DELETE --> will allow users to delete data from the DB if they do not wish the d
 GET owner infomation: 
 
     SELECT * FROM owners WHERE owner_id=101;
-
-/owners/101 --> returns all data about the owner with id 101
+    /owners/?101 --> returns all data about the owner with id 101
 
 GET address of 101: 
 
     SELECT street_address AS address FROM(owners RIGHT OUTER JOIN addresses ON owners.house_id = addresses.house_id WHERE owner_id=101);
-
-/owners/101/address --> returns street_address data of owner with id 101
+    /owners/?101/address --> returns street_address data of owner with id 101
 
 GET people within specific age brackets:
 
-    SELECT name FROM owners WHERE age BETWEEN 21-26;
+    SELECT name FROM owners WHERE age BETWEEN 21 AND 26;
+    /owners/?minage=21&maxage=26 --> retrurns the names of owners that have ages between 21 and 26
 
-/owners/age:21-26 --> retrurns the names of owners that have ages between 21 and 26
+GET people with specific household sizes
 
+    SELECT name from owners WHERE household_size=5;
+    /owners/?household_size=5
