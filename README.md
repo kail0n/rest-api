@@ -75,7 +75,7 @@ GET people within specific age brackets:
     BETWEEN 21 AND 26;)
     
    |API call path|
-   |---|
+   |:---:|
    |/owners/?min_age=21&max_age=26|
     
     returns the names of owners that have ages between 21 and 26
