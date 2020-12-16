@@ -74,7 +74,11 @@ GET people within specific age brackets:
     WHERE age 
     BETWEEN 21 AND 26;)
     
-    /owners/?min_age=21&max_age=26 --> returns the names of owners that have ages between 21 and 26
+   |API call path|
+   |---|
+   |/owners/?min_age=21&max_age=26|
+    
+    returns the names of owners that have ages between 21 and 26
 
 GET people with specific household sizes
 
@@ -82,4 +86,6 @@ GET people with specific household sizes
     FROM owners 
     WHERE household_size=5;)
     
-    /owners/?household_size=5
+    |API call path|
+    |---|
+    |/owners/?household_size=5|
