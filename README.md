@@ -27,10 +27,14 @@ Data will be accessed using commands SQL
 
 API will be able to handle GET, POST, PATCH/PUT and DELETE
 
-GET --> will read data from the DB as required (SELECT X FROM Y;)
-POST --> will add data to our DB (INSERT INTO X VALUES (x,y,z);)
-PATCH --> will allow users to update data; such as if they move houses (SET X WHERE Y;)
-DELETE --> will allow users to delete data from the DB if they do not wish the data to be stored anymore (DELETE X FROM Y WHERE Z)
+GET --> will read data from the DB as required 
+    (SELECT X FROM Y;)
+POST --> will add data to our DB 
+    (INSERT INTO X VALUES (x,y,z);)
+PATCH --> will allow users to update data; such as if they move houses 
+    (SET X WHERE Y;)
+DELETE --> will allow users to delete data from the DB if they do not wish the data to be stored anymore 
+    (DELETE X FROM Y WHERE Z)
 
 GET owner infomation: 
     SELECT * FROM owners WHERE owner_id=101;
