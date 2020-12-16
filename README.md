@@ -17,9 +17,11 @@ Our database schema will look like this:
 
 Table name owners   |    name    |    age    |    household_size    |   PRIMARY KEY owner_id    |    FOREIGN KEY house_id 
                     |    Kai     |    22     |          5           |          101              |             1
+                    |    Paola   |    25     |          6           |          102              |             2
 
 Table name addresses    |    PRIMARY KEY house_id   |    street_address    |    postcode  
-                        |             1             |   22 Koala Street    |    HF12 4DE           
+                        |             1             |   22 Koala Street    |    HF12 4DE       
+                        |             2             |    23 Bear Road      |    JG24 2FW      
 
 Data will be accessed using commands SQL 
 
@@ -37,3 +39,7 @@ SELECT * FROM owners WHERE owner_id=101;
 GET address of 101: 
 SELECT street_address AS address FROM(owners RIGHT OUTER JOIN addresses ON owners.house_id = addresses.house_id WHERE owner_id=101);
 /owners/101/address --> returns street_address data of owner with id 101
+
+GET people within specific age brackets:
+SELECT name FROM owners WHERE age BETWEEN 21-26;
+/owners/age:21-26
