@@ -50,7 +50,7 @@ GET owner infomation:
     SELECT * FROM owners WHERE owner_id=101;
     /owners/?101 --> returns all data about the owner with id 101
 
-GET address of 101: 
+GET address of 101:     
 
     SELECT street_address AS address FROM(owners RIGHT OUTER JOIN addresses ON owners.house_id = addresses.house_id WHERE owner_id=101);
     /owners/?101/address --> returns street_address data of owner with id 101
