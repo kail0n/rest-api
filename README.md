@@ -33,13 +33,13 @@ PATCH --> will allow users to update data; such as if they move houses (SET X WH
 DELETE --> will allow users to delete data from the DB if they do not wish the data to be stored anymore (DELETE X FROM Y WHERE Z)
 
 GET owner infomation: 
-SELECT * FROM owners WHERE owner_id=101;
+    SELECT * FROM owners WHERE owner_id=101;
 /owners/101 --> returns all data about the owner with id 101
 
 GET address of 101: 
-SELECT street_address AS address FROM(owners RIGHT OUTER JOIN addresses ON owners.house_id = addresses.house_id WHERE owner_id=101);
+    SELECT street_address AS address FROM(owners RIGHT OUTER JOIN addresses ON owners.house_id = addresses.house_id WHERE owner_id=101);
 /owners/101/address --> returns street_address data of owner with id 101
 
 GET people within specific age brackets:
-SELECT name FROM owners WHERE age BETWEEN 21-26;
+    SELECT name FROM owners WHERE age BETWEEN 21-26;
 /owners/age:21-26
