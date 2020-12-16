@@ -15,13 +15,15 @@ The REST API will need to enable users to:
 As the data is related (people own houses, houses have addresses) we opted for a relational database using SQL.
 Our database schema will look like this:
 
-    Table name owners   |    name    |    age    |    household_size    |   PRIMARY KEY owner_id    |    FOREIGN KEY house_id 
-                        |    Kai     |    22     |          5           |          101              |             1
-                        |    Paola   |    25     |          6           |          102              |             2
+|Table name owners   |    name    |    age    |    household_size    |   PRIMARY KEY owner_id    |    FOREIGN KEY house_id |
+|--------------------|------------|-----------|----------------------|---------------------------|-------------------------|
+|                    |    Kai     |    22     |          5           |          101              |             1           |
+|                    |    Paola   |    25     |          6           |          102              |             2           |
 
-    Table name addresses    |    PRIMARY KEY house_id   |    street_address    |    postcode  
-                            |             1             |   22 Koala Street    |    HF12 4DE       
-                            |             2             |    23 Bear Road      |    JG24 2FW      
+|Table name addresses    |    PRIMARY KEY house_id   |    street_address    |    postcode   |
+|------------------------|---------------------------|----------------------|---------------|
+|                        |             1             |   22 Koala Street    |    HF12 4DE   |    
+|                        |             2             |    23 Bear Road      |    JG24 2FW   |   
 
 Data will be accessed using SQL queries. 
 
