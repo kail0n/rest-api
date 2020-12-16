@@ -59,4 +59,5 @@ GET people within specific age brackets:
 
     SELECT name FROM owners WHERE age BETWEEN 21-26;
 
-/owners/age:21-26
+/owners/age:21-26 --> retrurns the names of owners that have ages between 21 and 26
+
